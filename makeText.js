@@ -17,7 +17,7 @@ function generateText(text) {
 function markText(path) {
     fs.readFile(path, 'utf8', function cb(err, data) {
         if (err) {
-            console.log(`Cannot read file: ${path}: ${err}`);
+            console.error(`Cannot read file: ${path}: ${err}`);
             process.exit(1);
         } else {
             generateText(data);
